@@ -1,0 +1,20 @@
+name: Testing custom actions
+on: push
+
+jobs:
+  testing-custom-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/hello
+        id: hello
+        with:
+          who-to-greet: world
+      - run: |
+          echo "Time: ${{ steps.hello.outputs.time }}"
+      - uses: ./.github/actions/hello-docker
+        id: hello-docker
+        with:
+          who-to-greet: world
+      - run: |
+          echo "Time: ${{ steps.hello-docker.outputs.time }}"
