@@ -30,6 +30,8 @@
     ]
   },
   "dependencies": {
+    "@actions/core": "^1.7.0",
+    "@actions/github": "^5.0.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "web-vitals": "^2.1.4"

@@ -1,9 +1,9 @@
 name: CI
 on:
   pull_request:
-    branches: [develop, main] # when PR is opened to develop
+    branches: [develop, main] # when PR is opened
   push:
-    # branches: [develop, main] # when PR is merged to develop
+    branches: [develop, main] # when PR is merged
 
 jobs:
   CodeQualityAndBuild:
