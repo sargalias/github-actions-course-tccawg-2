@@ -1,0 +1,16 @@
+name: Hello world Docker
+author: Spyros Argalias
+description: A simple test action with Docker
+inputs:
+  who-to-greet:
+    description: Who to greet
+    required: true
+    default: Test
+outputs:
+  time:
+    description: The greeting time
+runs:
+  using: docker
+  image: Dockerfile
+  args:
+    - ${{ inputs.who-to-greet }}
